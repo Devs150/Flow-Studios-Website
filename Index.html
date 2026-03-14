@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Flow Studio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#0a0a0a; --bg2:#121212; --panel:rgba(255,255,255,0.06);
+      --text:#fff; --muted:#bfbfbf; --accent:#ffffff; --accent2:#cccccc;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:'Poppins',sans-serif;
+      background:linear-gradient(180deg,var(--bg),var(--bg2));
+      color:var(--text);
+    }
+    header{
+      position:sticky;top:0;z-index:10;
+      background:rgba(0,0,0,0.5);backdrop-filter:blur(10px);
+      padding:1rem 2rem;display:flex;align-items:center;justify-content:space-between;
+      border-bottom:1px solid rgba(255,255,255,0.06);
+    }
+    .brand{
+      font-weight:600;
+      text-shadow:0 0 10px var(--accent);
+    }
+    nav a{
+      color:var(--text);text-decoration:none;margin:0 0.75rem;font-weight:500;opacity:0.9;
+      transition:color .2s ease, opacity .2s ease;
+    }
+    nav a:hover{color:var(--accent);opacity:1;text-shadow:0 0 8px var(--accent);}
+    nav a.active{color:var(--accent);text-shadow:0 0 8px var(--accent);}
+    .hero {
+  text-align: center;
+  padding: 6rem 2rem 4rem;
+  background: radial-gradient(
+    1600px 800px at 50% -20%,   /* larger radius + shifted center */
+    #1b1b1b 0%, 
+    transparent 80%             /* fade out more gradually */
+  );
+}
+    .hero h1{
+      font-size:3rem;margin:0 0 0.5rem;
+      text-shadow:0 0 15px var(--accent);
+    }
+    .hero p{
+      color:var(--muted);max-width:700px;margin:0.5rem auto 1.5rem;
+    }
+    .cta-btn{
+      background:linear-gradient(90deg,var(--accent),var(--accent2));
+      color:#0a0a0a;border:none;
+      border-radius:8px;padding:0.9rem 1.6rem;font-weight:700;cursor:pointer;
+      box-shadow:0 8px 24px rgba(255,255,255,0.25);transition:transform .15s ease;
+      text-decoration:none;display:inline-block;margin:0.5rem;
+      text-shadow:0 0 10px var(--accent);
+    }
+    .cta-btn:hover{transform:translateY(-2px);box-shadow:0 0 20px var(--accent);}
+    section{padding:3rem 2rem;max-width:1100px;margin:0 auto}
+    h2{margin-top:0;text-shadow:0 0 10px var(--accent);}
+    .panel{
+      background:var(--panel);border:1px solid rgba(255,255,255,0.08);
+      border-radius:14px;padding:1.5rem;backdrop-filter:blur(6px);
+    }
+    .empty{
+      text-align:center;color:var(--muted);padding:2rem;
+      border:1px dashed rgba(255,255,255,0.18);border-radius:12px;
+      background:rgba(255,255,255,0.03);
+    }
+    footer{
+      text-align:center;padding:2rem;color:var(--muted);
+      border-top:1px solid rgba(255,255,255,0.06);
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="brand">Flow Studio</div>
+    <nav>
+      <a class="active" href="index.html">Home</a>
+      <a href="games.html">Games</a>
+      <a href="news.html">News</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>Flow Studio</h1>
+    <p>Crafting immersive worlds with precision and creativity.</p>
+    <a href="games.html" class="cta-btn">Explore Games</a>
+    <a href="contact.html" class="cta-btn">Get in Touch</a>
+  </section>
+
+  <section id="about">
+    <h2>About Us</h2>
+    <div class="panel">
+      <p>Flow Studio is dedicated to building innovative, story‑driven experiences. 
+      Our mission is to merge creativity with technical mastery, delivering games 
+      that resonate with players worldwide.</p>
+    </div>
+  </section>
+
+  <section id="faq">
+    <h2>FAQ</h2>
+    <div class="panel">
+      <p><strong>How can I follow updates?</strong><br/>
+      Visit our <a href="news.html" style="color:var(--accent)">News page</a> for announcements and development updates.</p>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2026 Flow Studio. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
